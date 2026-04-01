@@ -1,0 +1,25 @@
+[project]
+name = "cdp-cluster-fastmcp-server-v7"
+version = "0.7.0"
+description = "FastMCP server v7 enterprise deployment for CDP / Cloudera Manager operations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastmcp>=2.0.0",
+  "requests>=2.32.0",
+  "python-dotenv>=1.0.0",
+  "fastapi>=0.116.0",
+  "uvicorn[standard]>=0.35.0",
+]
+
+[project.scripts]
+cdp-cluster-mcp-stdio = "cdp_cluster_mcp_server.stdio_server:main"
+cdp-cluster-mcp-http = "serve_http:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["cdp_cluster_mcp_server"]
+include = ["serve_http.py"]

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdp-cluster-fastmcp-server-v7
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cdp-cluster-fastmcp-server-v7
+  template:
+    metadata:
+      labels:
+        app: cdp-cluster-fastmcp-server-v7
+    spec:
+      containers:
+      - name: mcp
+        image: your-image:latest
+        ports:
+        - containerPort: 8000

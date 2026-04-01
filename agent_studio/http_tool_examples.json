@@ -1,0 +1,38 @@
+{
+  "tools": [
+    {
+      "name": "Autopilot Summary",
+      "method": "POST",
+      "url": "https://<your-app-url>/mcp/invoke/autopilot_summary_tool",
+      "headers": {
+        "Authorization": "Bearer change-me",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "cluster_key": "prod"
+      }
+    },
+    {
+      "name": "Zero Touch Decision",
+      "method": "POST",
+      "url": "https://<your-app-url>/mcp/invoke/zero_touch_decision_tool",
+      "headers": {
+        "Authorization": "Bearer change-me",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "cluster_key": "prod"
+      }
+    },
+    {
+      "name": "Watchdog Status",
+      "method": "POST",
+      "url": "https://<your-app-url>/mcp/invoke/watchdog_status_tool",
+      "headers": {
+        "Authorization": "Bearer change-me",
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    }
+  ]
+}
